@@ -1,7 +1,12 @@
 #!/usr/bin/python3
 
+"""lookup - a function that checks attributes
+and methods of an object
+"""
+
+
 def lookup(obj):
-    result = []
-    for attribute in dir(obj):
-        result.append(attribute)
-    return result
+    """returns a lists of available attributes
+    and methods of an object"""
+
+    return dir(obj)

@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-"""A class with a public instance area() """
+"""A class BaseGeometry """
 
 
 class BaseGeometry:
+    """a public atrribute area"""
     def area(self):
-        """a public instance that raises an
-        Exception if area() is not implemented
-        """
-
+        """raise Exception"""
         raise Exception("area() is not implemented")

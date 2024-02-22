@@ -21,9 +21,9 @@ class BaseGeometry:
 
         """
         if not isinstance(value, int):
-            raise TypeError("{} must be an integer".format(name))
+            raise TypeError("{:s} must be an integer".format(name))
         if value <= 0:
-            raise ValueError("{} must be greator than 0".format(name))
+            raise ValueError("{:s} must be greator than 0".format(name))
 
 
 class Rectangle(BaseGeometry):
@@ -31,9 +31,15 @@ class Rectangle(BaseGeometry):
 
     def __init__(self, width, height):
         """
-        instantiation
+        instantiation of the width and height
+         Args:
+         width (int): must be private and a paositive integer validated by
+                        integer_validator
+         height (int): must be private and a paositive integer validated by
+                        integer_validator
         """
+
+        self.integer_validator("width", width)
         self.__width = width
+        self.integer_validator("height", height)
         self.__height = height
-        self.integer_validator = ('width', width)
-        self.integer_validator = ('height', height)

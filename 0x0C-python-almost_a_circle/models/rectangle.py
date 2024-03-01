@@ -120,6 +120,7 @@ class Rectangle(Base):
             f"- {self.width}/{self.height}"
 
     def update(self, *args):
+        """assigning arguments to each attri"""
         if len(args) >= 1:
             self.id = args[0]
         if len(args) >= 2:

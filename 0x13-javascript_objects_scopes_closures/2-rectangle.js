@@ -1,0 +1,14 @@
+#!/usr/bin/node
+class Rectangle {
+  constructor (w, h) {
+    this.width = w;
+    this.height = h;
+
+    if (w <= 0 || h <= 0 || !Number.isInteger(w) || !Number.isInteger(h)) {
+      this.width = null;
+      this.height = null;
+    }
+  }
+}
+
+module.exports = Rectangle;

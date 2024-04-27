@@ -1,12 +1,11 @@
 #!/usr/bin/node
 class Rectangle {
   constructor (w, h) {
-    this.width = w;
-    this.height = h;
-
-    if (w <= 0 || h <= 0 || !Number.isInteger(w) || !Number.isInteger(h)) {
-      this.width = null;
-      this.height = null;
+    if (typeof w === 'number' && w > 0) {
+      if (typeof h === 'number' && h > 0) {
+        this.width = w;
+        this.height = h;
+      }
     }
   }
 }
